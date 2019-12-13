@@ -8,11 +8,17 @@ description: Calibration guide for Deltas with removable probes
 
 > Credit for the content of this guide goes to user @manu7irl on our Discord
 
-## First steps
+## Getting Started
 
 {% hint style="info" %}
 It is recommended, prior to following this guide, to do an endstop calibration to ensure the motor phases are synced to a full step every time it homes. Ensure it homes to exactly the same position each time to verify consistent results.
 {% endhint %}
+
+As an example of the type of probe used in this guide, refer here:  
+[https://www.aliexpress.com/item/32841920169.html](https://www.aliexpress.com/item/32841920169.html)  
+  
+This type of probe has a reported deviation of 0.0000 \(tested up to 100mm/s\). You can also use something like this, which will work as well:  
+[https://www.aliexpress.com/item/32853123390.html](https://www.aliexpress.com/item/32853123390.html)
 
 ## Measure the Max Height Between Bed and Nozzle
 
@@ -88,6 +94,7 @@ save_config
 G28
 bed_mesh_calibrate
 G1 X0 Y0 Z15 F4200
+save_config
 ```
 
 ## Z Offset Set-Up
