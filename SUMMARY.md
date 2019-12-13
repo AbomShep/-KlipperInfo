@@ -13,6 +13,7 @@
   * [Install video streaming if desired](klipper-+-dwc2-1/install-video-streaming-if-desired.md)
 * [Helpful Tips](helpful-tips-1/README.md)
   * [Calibrate your extruder](helpful-tips-1/calibrate-your-extruder.md)
+  * [Calibrate Delta](helpful-tips-1/calibrate-delta.md)
   * [Tuning your slicer](helpful-tips-1/tuning-your-slicer.md)
   * [Klipper Gcode Commands](helpful-tips-1/klipper-gcode-commands.md)
   * [Calculate Filament Use](helpful-tips-1/calculate-filament-use.md)
