@@ -20,6 +20,16 @@ If you want to run multiple printers simultaneously, you need an instance of Oct
 Note that you can set up the second instance of Klipper before or after flashing the second controller.
 {% endhint %}
 
+{% hint style="warning" %}
+In some use cases, users report only one mainboard displaying when running the following command:  
+`ls /dev/serial/by-id/*`  
+  
+If you only see one mainboard when running this command, try this command instead:  
+`ls /dev/serial/by-path/*`  
+  
+If the second command shows multiple results but the first one does not, adjust the directions accordingly, so all instances of `/by-id/` are replaced with `/by-path/`
+{% endhint %}
+
 1. Install your Octoprint instances, download PuTTY and learn how to SSH into your Raspberry Pi, following Chris's Basement \(Chris Riley\) tutorial video on installing multiple instances of Octoprint: [https://www.youtube.com/watch?v=7Saa1HpLRoM&t=371s](https://www.youtube.com/watch?v=7Saa1HpLRoM&t=371s) 
 2. Install Klipper, and Octoklipper plugin, for your first Octoprint instance, per the install instructions on github [https://github.com/KevinOConnor/klipper/blob/master/docs/Installation.md](https://github.com/KevinOConnor/klipper/blob/master/docs/Installation.md) or another Chris Riley video, [https://www.youtube.com/watch?v=i\_541iD5Bj0](https://www.youtube.com/watch?v=i_541iD5Bj0) 
 3. Flash firmware onto first printer control board 
