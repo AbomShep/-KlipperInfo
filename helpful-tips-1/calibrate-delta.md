@@ -99,6 +99,12 @@ save_config
 
 ## Z Offset Set-Up
 
+{% hint style="danger" %}
+Removable probe **MUST** be attached for this to work. Failure to do so will cause your nozzle to crash into the bed, and hardware damage can occur.  
+  
+Also, ensure you are probing **COLD** -- failure to do so can destroy some probes, including the ones linked to at the start of this guide. If your probe can handle temperatures, determine what these temperatures are and stay within the range. If in doubt, don't apply heat.
+{% endhint %}
+
 In the GCode terminal of your front end of choice \(OctoPrint, DWC, etc.\), send this command:
 
 ```bash
@@ -134,6 +140,8 @@ This will save the calculated `z_offset` for the first layer height.
 
 {% hint style="danger" %}
 Removable probe **MUST** be attached for this to work. Failure to do so will cause your nozzle to crash into the bed, and hardware damage can occur.
+
+Also, ensure you are probing **COLD** -- failure to do so can destroy some probes, including the ones linked to at the start of this guide. If your probe can handle temperatures, determine what these temperatures are and stay within the range. If in doubt, don't apply heat.
 {% endhint %}
 
 Now we need to calibrate the printer tower angles, delta\_radius and endstop position according to your arm\_length. To do so, run the following command
