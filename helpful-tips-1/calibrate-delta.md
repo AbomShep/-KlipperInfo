@@ -147,7 +147,9 @@ Results are saved automatically. It is recommended to do this twice or more for 
 ## Calculate Bed Mesh
 
 {% hint style="danger" %}
-Removable probe **MUST** be attached for this to work. Failure to do so will cause your nozzle to crash into the bed, and hardware damage can occur.
+Removable probe **MUST** be attached for this to work. Failure to do so will cause your nozzle to crash into the bed, and hardware damage can occur.  
+  
+Also, ensure you are probing **COLD** -- failure to do so can destroy some probes, including the ones linked to at the start of this guide. If your probe can handle temperatures, determine what these temperatures are and stay within the range. If in doubt, don't apply heat.
 {% endhint %}
 
 Now we need to use the probe to calculate the bed mesh. To do so, run the following command:
