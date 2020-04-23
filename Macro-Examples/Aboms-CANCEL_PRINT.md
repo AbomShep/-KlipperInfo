@@ -1,9 +1,11 @@
 ---
 description: CANCEL_PRINT Macro
 ---
+
 # CANCEL_PRINT
 
 This is what I use for a cancel macro. Nothing says it has to be done exactly this way.
+
 ```text
 [gcode_macro CANCEL_PRINT]
 gcode:
