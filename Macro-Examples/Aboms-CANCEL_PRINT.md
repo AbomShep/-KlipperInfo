@@ -1,5 +1,9 @@
+---
+description: ;This is what I use for a cancel macro. Nothing says it has to be done exactly this way.
+---
+# CANCEL_PRINT
+
 ```text
-;This is what I use for a cancel macro. Nothing says it has to be done exactly this way.
 [gcode_macro CANCEL_PRINT]
 gcode:
    M220 S100 ; Reset Speed factor override percentage to default (100%)
