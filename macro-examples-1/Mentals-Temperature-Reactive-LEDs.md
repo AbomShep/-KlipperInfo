@@ -1,7 +1,3 @@
----
-description: Temperature Reactive LEDs
----
-
 Author: mental
 
 Description: 
