@@ -45,5 +45,5 @@
   * [TMC2130](trinamic-driver-tips-1/tmc2130.md)
   * [TMC2208](trinamic-driver-tips-1/tmc2208.md)
 * [Macro Examples](macro-examples-1/README.md)
-  * [Aboms CANCEL_PRINT](macro-examples-1/ABOMS-CANCEL_PRINT.md)
-  * [Aboms Menu](macro-examples-1/aboms-menu.md)
+  * [Aboms CANCEL_PRINT](macro-examples-1/Aboms-CANCEL_PRINT.md)
+  * [Aboms Menu](macro-examples-1/Aboms-Menu.md)
