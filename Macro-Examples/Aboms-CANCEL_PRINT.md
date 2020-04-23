@@ -1,3 +1,4 @@
+```text
 ;This is what I use for a cancel macro. Nothing says it has to be done exactly this way.
 [gcode_macro CANCEL_PRINT]
 gcode:
@@ -19,3 +20,4 @@ gcode:
    ;set part fan speed to zero.
    M106 S0
    ;bed and hotend are left at the print temps in case I want to restart.
+   ```

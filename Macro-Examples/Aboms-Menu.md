@@ -1,4 +1,5 @@
-:Abom 04/22/2020
+```text
+;Abom 04/22/2020
 ;This menu disables some of the stock menu items that I don't use and adds many others.
 :There are many ways you can do this, but this will give you an example to work with.
 ;first attempt at new folder.
@@ -174,3 +175,4 @@ items:
 type: item
 name: "  [In progress]"
 cursor: \x20
+```
