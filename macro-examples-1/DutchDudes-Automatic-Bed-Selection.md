@@ -1,7 +1,5 @@
 ---
-description: >-
-Creates or selects saved bed mesh for your printer to load.
-Heating your printbed will cause slight warping in your bed, different temperatures different numbers.
+description: Creates or selects saved bed mesh for your printer to load. Heating your printbed will cause slight warping in your bed, different temperatures different numbers.
 ---
 
 Author: DutchDude
