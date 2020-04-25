@@ -48,3 +48,4 @@
   * [Aboms CANCEL_PRINT](macro-examples-1/Aboms-CANCEL_PRINT.md)
   * [Aboms Menu](macro-examples-1/Aboms-Menu.md)
   * [Mentals Temperature Reactive Leds](macro-examples-1/Mentals-Temperature-Reactive-LEDs.md)
+  * [DutchDudes Automatic Bed Selection](macro-examples-1/DutchDudes-Automatic-Bed-Selection.md)
