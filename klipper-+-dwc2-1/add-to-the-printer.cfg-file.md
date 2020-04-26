@@ -42,6 +42,11 @@ listen_port: 4750
 web_path: dwc2/web
 ```
 
+Restart Klipper
+```text
+sudo systemctl restart klipper
+```
+
 {% hint style="info" %}
 Connect to your UI by directing your browser to the IP address of your Raspberry PI with the port number added to the end ex. 192.168.2.3:4750.  Common reasons for your connection to be refused are a missing/incorrectly placed printer.cfg file, or a typo somewhere in the file.  Check /tmp/klippy.log for hints as to the problem.
 {% endhint %}
