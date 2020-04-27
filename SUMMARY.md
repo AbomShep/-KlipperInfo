@@ -4,6 +4,7 @@
 - [Klipper + Octoprint](klipper-+-octoprint-1/README.md)
   - [Installing Octoprint](klipper-+-octoprint-1/installing-klipper-with-octoprint.md)
   - [Installing Klipper](klipper-+-octoprint-1/installing-klipper.md)
+  - [Create multiple instances](multiple_instances_klipper_and_octoprint.md)
 - [Klipper + DWC2](klipper-+-dwc2-1/README.md)
   - [Things to Know about Klipper and DWC2](klipper-+-dwc2-1/things-to-know-about-klipper-and-dwc2.md)
   - [Installing Raspbian Stretch Lite](klipper-+-dwc2-1/installing-klipper-with-dwc2.md)
