@@ -60,7 +60,7 @@ The main part of this guide is below, regarding set up of second instance of Kli
    KLIPPY_ARGS="/home/pi/klipper/klippy/klippy.py /home/pi/printer2.cfg -l /tmp/klippy2.log -I /tmp/printer2"
    ```
 
-   3. Exit and save changes
+   Exit and save changes
 
 3. Edit the autorun file and change everything that says "klipper" to "klipper2".
 
