@@ -7,6 +7,7 @@ description: Conditional Saving And Restarting.
 Author: Makoto
 
 ## Description
+
 There are occasions where the printer needs to save the active config to the config file.
 One of which is after a new bed mesh has been created. Unfortunately, a side-effect of saving is a restart of 
 Klipper.
@@ -19,8 +20,11 @@ want to restart the printer unconditionally. The below functions do a conditiona
 the configfile only if the SAVE_AT_END macro has been called since the printer's startup.
 
 ## Macros
+
 ### SAVE_AT_END
+
 This macro contains a variable that stores the save flag which is unset by default and set by executing the macro.
+
 ```text
 [gcode_macro SAVE_AT_END]
 variable_save: 0
@@ -29,7 +33,9 @@ gcode:
 ```
 
 ### SAVE_IF_SET
+
 This macro saves and restarts if the flag has been set or otherwise does nothing.
+
 ```text
 [gcode_macro SAVE_IF_SET]
 gcode:
