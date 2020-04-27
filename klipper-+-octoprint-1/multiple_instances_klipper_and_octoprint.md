@@ -1,10 +1,8 @@
----
-description: Credit for the content of this guide goes to Chris Riley for his guides on setting up klipper and multiple instances of Octoprint, and to user "shadrincev" on 3dtoday.ru for his guide, from which this is mostly copied/plagiarized. Go here to see his original, and let Google translate from the cyrillic https://3dtoday.ru/blogs/shadrincev/double-klipper/
----
-
 # Install multiple instances of Klipper and Octoprint
 
 ## Author: David Paauwe
+
+Credit for the content of this guide goes to Chris Riley for his guides on setting up klipper and multiple instances of Octoprint, and to user "shadrincev" on 3dtoday.ru for his guide, from which this is mostly copied/plagiarized. Go here to see his original, and let Google translate from the cyrillic https://3dtoday.ru/blogs/shadrincev/double-klipper/
 
 {% hint style="info" %}
 If you want to run multiple printers simultaneously, you need an instance of Octoprint for each instance of Klipper you set up.
@@ -27,10 +25,10 @@ Note that you can set up the second instance of klipper before or after flashing
 
    1. in your ~/klipper directory, run the make Menuconfig and modify settings to correspond to your second printer controller/MCU
 
-      ```text
-      cd ~/klipper/
-      make menuconfig2
-      ```
+   ```text
+   cd ~/klipper/
+   make menuconfig2
+   ```
 
    2. Run “make” command: make
    3. identify the serial port of second printer, ls /dev/serial/by-id/\*
@@ -38,29 +36,31 @@ Note that you can set up the second instance of klipper before or after flashing
    4. stop klipper service, sudo service klipper stop
    5. flash the device using correct serial port:
 
-      ```text
-      make flash FLASH_DEVICE=/dev/serial/by-id/<serial port ID from above>
-      ```
+   ```text
+   make flash FLASH_DEVICE=/dev/serial/by-id/<serial port ID from above>
+   ```
 
 {% hint style="info" %}
 The main part of this guide is below, regarding set up of second instance of Klipper called "klipper2". This is very briefly mentioned in the Klipper Github FAQ, but it was not clear to me. In essence you will copy 3 files, edit 2 of them, and activate the second autorun script.
 {% endhint %}
 
 1. Copy Klipper autorun files to create second instance "klipper2"  
-   Navigate to your top directory that contains "bin, etc, var, tmp, root" and run the following
-   a. sudo cp /etc/init.d/klipper /etc/init.d/klipper2
-   b. sudo cp /etc/default/klipper /etc/default/klipper2
-   c. sudo cp /var/run/klipper.pid /var/run/klipper2.pid
+   Navigate to your top directory that contains "bin, etc, var, tmp, root" and run the following:
+
+   1. sudo cp /etc/init.d/klipper /etc/init.d/klipper2
+   2. sudo cp /etc/default/klipper /etc/default/klipper2
+   3. sudo cp /var/run/klipper.pid /var/run/klipper2.pid
 
 2. Edit the configuration file to create second instances of the log file and virtual printer port:
-   a. open the configuration in nano text editor: sudo nano /etc/default/klipper2
-   b. edit KLIPP_ARGS line to change the path to the printer2 config file, the klippy2.log file and create the second virtual printer port. It should look something like:
+
+   1. open the configuration in nano text editor: sudo nano /etc/default/klipper2
+   2. edit KLIPP_ARGS line to change the path to the printer2 config file, the klippy2.log file and create the second virtual printer port. It should look something like:
 
    ```text
    KLIPPY_ARGS="/home/pi/klipper/klippy/klippy.py /home/pi/printer2.cfg -l /tmp/klippy2.log -I /tmp/printer2"
    ```
 
-   c. Exit and save changes (CRTL, X, Y, ENTER)
+   3. Exit and save changes
 
 3. Edit the autorun file and change everything that says "klipper" to "klipper2".
 
@@ -69,14 +69,15 @@ The main part of this guide is below, regarding set up of second instance of Kli
    ```
 
    and change:
-   a. "klipper daemon" to "klipper2 daemon"
-   b. "klipper" to "klipper2"
-   c. "starting klipper" to "starting klipper2"
-   d. "stopping klipper" to "stopping klipper2"
-   e. "Restarting klipper" to "Restarting klipper2"
-   f. "Usage: /etc/init.d/klipper {start|stop|status|restart|reload|force-reload}" to
-   "Usage: /etc/init.d/klipper2 {start|stop|status|restart|reload|force-reload}"
-   g. Exit and save changes
+
+   1. "klipper daemon" to "klipper2 daemon".
+   2. "klipper" to "klipper2".
+   3. "starting klipper" to "starting klipper2".
+   4. "stopping klipper" to "stopping klipper2".
+   5. "Restarting klipper" to "Restarting klipper2".
+   6. "Usage: /etc/init.d/klipper {start|stop|status|restart|reload|force-reload}" to
+      "Usage: /etc/init.d/klipper2 {start|stop|status|restart|reload|force-reload}"
+   7. Exit and save changes.
 
 4. Make the autorun script active: sudo chmod +x /etc/init.d/klipper2
 
