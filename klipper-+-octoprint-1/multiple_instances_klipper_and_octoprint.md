@@ -2,7 +2,9 @@
 description: Credit for the content of this guide goes to Chris Riley for his guides on setting up klipper and multiple instances of Octoprint, and to user "shadrincev" on 3dtoday.ru for his guide, from which this is mostly copied/plagiarized. Go here to see his original, and let Google translate from the cyrillic https://3dtoday.ru/blogs/shadrincev/double-klipper/
 ---
 
-# Author: David Paauwe
+# Install multiple instances of Klipper and Octoprint
+
+## Author: David Paauwe
 
 {% hint style="info" %}
 If you want to run multiple printers simultaneously, you need an instance of Octoprint for each instance of Klipper you set up.
