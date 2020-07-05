@@ -50,5 +50,6 @@
   - [Aboms Menu](macro-examples-1/Aboms-Menu.md)
   - [Mentals Temperature Reactive Leds](macro-examples-1/Mentals-Temperature-Reactive-LEDs.md)
   - [DutchDudes Automatic Bed Selection](macro-examples-1/DutchDudes-Automatic-Bed-Selection.md)
+  - [Makotos Conditional Config Saving](macro-examples-1/Makotos-Conditional-Config-Saving.md)
   - [Makotos Save-At-End & Save_If_Set](macro-examples-1/Makotos-Save_At_End-If_Set.md)
 - [Useful Code Links](useful-code-links/README.md)
