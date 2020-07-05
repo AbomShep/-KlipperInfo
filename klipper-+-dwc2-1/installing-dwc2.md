@@ -6,6 +6,10 @@ description: >-
 
 # Installing DWC2
 
+{% hint style="warning" %}
+Due to recent changes within Klipper DWC2 no longer requires you to modify Klipper's gcode.py file.
+{% endhint %}
+
 ```text
 sudo systemctl stop klipper
 cd ~
@@ -21,31 +25,23 @@ git clone https://github.com/Stephan3/dwc2-for-klipper.git
 ln -s ~/dwc2-for-klipper/web_dwc2.py ~/klipper/klippy/extras/web_dwc2.py
 ```
 
- For now, we need to make some changes in klipper to make it work with DWC2. Eventually, this will not be necessary.
-
-{% hint style="warning" %}
-Note that we're making a small change to Klipper with these lines. That means that when ever you upgrade Klipper, you'll need to do this step again to keep DWC2 working.
-{% endhint %}
-
-```text
-gcode=$(sed 's/self.bytes_read = 0/self.bytes_read = 0\n        self.respond_callbacks = []/g' klipper/klippy/gcode.py)
-gcode=$(echo "$gcode" | sed 's/# Response handling/def register_respond_callback(self, callback):\n        self.respond_callbacks.append(callback)/')
-gcode=$(echo "$gcode" | sed 's/os.write(self.fd, msg+"\\n")/os.write(self.fd, msg+"\\n")\n            for callback in self.respond_callbacks:\n                callback(msg+"\\n")/')
-echo "$gcode" > klipper/klippy/gcode.py
-```
-
-  Set up a virtual SD card for klipper to use.
+Set up a virtual SD card for klipper to use.
 
 ```text
 mkdir -p ~/sdcard/dwc2/web
-cd ~/sdcard/dwc2/web 
+mkdir -p ~/sdcard/sys
+cd ~/sdcard/dwc2/web
 ```
 
 download and install the Duet UI
 
+{$ hint style="warning" $}
+The github file used below is an example using the latest version available at the time of this writing.
+Be sure to check https://github.com/Stephan3/dwc2-for-klipper for the most up to date version being used by DWC2
+{% endhint%}
+
 ```text
-wget https://github.com/chrishamm/DuetWebControl/releases/download/2.0.0-RC5/DuetWebControl.zip
+wget https://github.com/Duet3D/DuetWebControl/releases/download/3.1.1/DuetWebControl-SD.zip
 unzip *.zip && for f_ in $(find . | grep '.gz');do gunzip ${f_};done
 sudo systemctl start klipper
 ```
-
