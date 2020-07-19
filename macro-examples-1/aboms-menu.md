@@ -1,3 +1,10 @@
+---
+description: >-
+  Warning: The current version of Klipper does not like this menu. The
+  show_back: false (or true) will throw and error, even though it's still shown
+  in Klipper's docs as valid.
+---
+
 # Aboms Menu
 
 {% hint style="info" %}
