@@ -156,35 +156,4 @@ name: "  +0.1"
 width: 7
 gcode:
         TESTZ Z=+0.1
-<<<<<<< HEAD:macro-examples-1/Aboms-Menu.md
 ```
-=======
-
-[menu __calibration_bed_mesh_calibrate]
-type: command
-name: Generate bed mesh
-width: 18
-show_back: False
-gcode:
-   G29
-items:
-    __calibration_card_bed_mesh
-
-[menu __calibration_card_bed_mesh]
-type: vsdcard
-name: Calibration card
-content:
-    "{0}"
-    ""
-    "   Will reboot"
-    "  when complete"
-items:
-    __calibration_bed_mesh_calibrate_text_1
-
-[menu __calibration_bed_mesh_calibrate_text_1]
-type: item
-name: "  [In progress]"
-cursor: \x20
-```
-
->>>>>>> 4d32e00a9b6408fb221e03f067388f8de51869f2:macro-examples-1/aboms-menu.md
