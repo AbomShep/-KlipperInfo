@@ -1,7 +1,9 @@
+# Aboms Menu
+
 {% hint style="info" %}
-This menu disables some of the stock menu items that I don't use and adds many others.
-There are many ways you can do this, but this will give you an example to work with.
+This menu disables some of the stock menu items that I don't use and adds many others. There are many ways you can do this, but this will give you an example to work with.
 {% endhint %}
+
 ```text
 [menu __main]
 type: list
@@ -176,3 +178,4 @@ type: item
 name: "  [In progress]"
 cursor: \x20
 ```
+

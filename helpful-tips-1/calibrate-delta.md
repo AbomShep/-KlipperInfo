@@ -112,7 +112,9 @@ M851Z
 ```
 
 {% hint style="danger" %}
-Remove the mounted probe at this time, and place a sheet of paper under the nozzle. It will be needed for the next step!
+Remove the mounted probe at this time, and place a sheet of paper under the nozzle. It will be needed for the next step!  
+  
+Heat up both nozzle and bed to printing temp as well, this will ensure accurate results at print temperature.
 {% endhint %}
 
 Once you have done this, issue the following command until the nozzle catches the paper sheet. It should drag but not firmly:

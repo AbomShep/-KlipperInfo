@@ -1,6 +1,9 @@
+# Aboms CANCEL\_PRINT
+
 {% hint style="info" %}
 This is what I use for a cancel macro. Nothing says it has to be done exactly this way.
 {% endhint %}
+
 ```text
 [gcode_macro CANCEL_PRINT]
 gcode:
@@ -18,8 +21,9 @@ gcode:
       G1 X0 Y221 F1000 ; Move Heat Bed to the front for easy print removal
       M84 ; Disable stepper motors
    {% endif %}
-   
+
    ;set part fan speed to zero.
    M106 S0
    ;bed and hotend are left at the print temps in case I want to restart.
-   ```
+```
+
