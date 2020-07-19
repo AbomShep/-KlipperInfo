@@ -2,6 +2,7 @@
 This menu disables some of the stock menu items that I don't use and adds many others.
 There are many ways you can do this, but this will give you an example to work with.
 {% endhint %}
+
 ```text
 [menu __main]
 type: list
@@ -19,7 +20,6 @@ type: list
 name: Calibration
 items:
     __calibration_home_all_axes
-    __calibration_bed_mesh_calibrate
     __calibration_probe_calibrate
     __calibration_probe_accuracy
     __general_firmware_restart
@@ -64,7 +64,6 @@ gcode:
 
 [menu __calibration_probe_calibrate]
 type: list
-show_back: False
 name: Adjust Z offset
 enter_gcode:
     G28
@@ -149,30 +148,4 @@ name: "  +0.1"
 width: 7
 gcode:
         TESTZ Z=+0.1
-
-[menu __calibration_bed_mesh_calibrate]
-type: command
-name: Generate bed mesh
-width: 18
-show_back: False
-gcode:
-   G29
-items:
-    __calibration_card_bed_mesh
-
-[menu __calibration_card_bed_mesh]
-type: vsdcard
-name: Calibration card
-content:
-    "{0}"
-    ""
-    "   Will reboot"
-    "  when complete"
-items:
-    __calibration_bed_mesh_calibrate_text_1
-
-[menu __calibration_bed_mesh_calibrate_text_1]
-type: item
-name: "  [In progress]"
-cursor: \x20
 ```
