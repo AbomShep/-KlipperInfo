@@ -1,25 +1,28 @@
 ---
-description: Creates or selects saved bed mesh for your printer to load. Heating your printbed will cause slight warping in your bed, different temperatures different numbers.
+description: >-
+  Creates or selects saved bed mesh for your printer to load. Heating your
+  printbed will cause slight warping in your bed, different temperatures
+  different numbers.
 ---
 
+# DutchDudes Automatic Bed Selection
+
 Author: DutchDude
+
 {% hint style="info" %}
-This macro will check your config for a saved bed mesh, if available it is selected.
-If the mesh is not available we'll heat up the bed, calibrate and save at whatever temperature you desire.
+This macro will check your config for a saved bed mesh, if available it is selected. If the mesh is not available we'll heat up the bed, calibrate and save at whatever temperature you desire.
 
 Run this in your start print gcode.
 
-Example start gcode:
-LOAD_MESH_TEMP BED_TEMPERATURE=50
+Example start gcode: LOAD\_MESH\_TEMP BED\_TEMPERATURE=50
 
 This will cause the macro to load/generate a bed mesh at a temperature of 50 centigrade.
 
-Example2:
-LOAD_MESH_TEMP BED_TEMPERATURE=50 FORCE=1
+Example2: LOAD\_MESH\_TEMP BED\_TEMPERATURE=50 FORCE=1
 
 Changed your bed or want to renew your bed mesh, adding FORCE=1 will generate a new mesh.
 
-It's important to write SAVE_CONFIG in the terminal after your print is finished to save your bed mesh, this will cause your printer to restart.
+It's important to write SAVE\_CONFIG in the terminal after your print is finished to save your bed mesh, this will cause your printer to restart.
 {% endhint %}
 
 ```text
@@ -44,7 +47,7 @@ gcode:
             ADD_BED_MESH TARGET_TEMP={BED_TEMPERATURE}
         {% endif %}
     {% endif %}
-    
+
 [gcode_macro ADD_BED_MESH]
 default_parameter_TARGET_TEMP: 30
 gcode:
@@ -53,3 +56,4 @@ gcode:
     BED_MESH_CALIBRATE
     BED_MESH_PROFILE SAVE={TARGET_TEMP}
 ```
+

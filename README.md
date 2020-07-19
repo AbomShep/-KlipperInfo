@@ -23,3 +23,4 @@ We've removed the sections that were meant to guide you in installing Klipper, O
 {% endhint %}
 
 We add to this as often as we find something useful. If you have comments or suggestions, feel free to join our discord and let us know! Or email us at abomshep@gmail.com
+
