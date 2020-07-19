@@ -1,6 +1,6 @@
 ---
-description: >- 
-This in example of what you can do by explicitly declaring a menu
+description: >-
+  This in example of what you can do by explicitly declaring a menu
 ---
 
 # Aboms Menu
