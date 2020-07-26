@@ -1,6 +1,5 @@
 ---
-description: >-
-  This is an example of what you can do by explicitly declaring a menu
+description: This is an example of what you can do by explicitly declaring a menu
 ---
 
 # Aboms Menu
@@ -155,3 +154,4 @@ width: 7
 gcode:
         TESTZ Z=+0.1
 ```
+
