@@ -82,22 +82,22 @@ These make running calibration commands simpler
 ```yaml
 [gcode_macro M851]
 gcode:
-G28
-probe_calibrate
+  G28
+  probe_calibrate
 
 [gcode_macro G32]
 gcode:
-G28
-delta_calibrate
-G1 X0 Y0 F4200
-save_config
+  G28
+  delta_calibrate
+  G1 X0 Y0 F4200
+  save_config
 
 [gcode_macro G29]
 gcode:
-G28
-bed_mesh_calibrate
-G1 X0 Y0 Z15 F4200
-save_config
+  G28
+  bed_mesh_calibrate
+  G1 X0 Y0 Z15 F4200
+  save_config
 ```
 
 ## Z Offset Set-Up
