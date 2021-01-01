@@ -80,17 +80,20 @@ algorithm: bicubic
 These make running calibration commands simpler
 
 ```yaml
-[gcode_macro M851Z]
+[gcode_macro M851]
+gcode:
 G28
 probe_calibrate
 
 [gcode_macro G32]
+gcode:
 G28
 delta_calibrate
 G1 X0 Y0 F4200
 save_config
 
 [gcode_macro G29]
+gcode:
 G28
 bed_mesh_calibrate
 G1 X0 Y0 Z15 F4200
@@ -108,7 +111,7 @@ Also, ensure you are probing **COLD** -- failure to do so can destroy some probe
 In the GCode terminal of your front end of choice \(OctoPrint, DWC, etc.\), send this command:
 
 ```bash
-M851Z
+M851
 ```
 
 {% hint style="danger" %}
