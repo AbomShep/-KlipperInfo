@@ -120,13 +120,13 @@ Heat up both nozzle and bed to printing temp as well, this will ensure accurate 
 Once you have done this, issue the following command until the nozzle catches the paper sheet. It should drag but not firmly:
 
 ```bash
-testz z=-1mm
+testz z=-1
 ```
 
 If you go too far and the paper sheet will not move, run the following until the paper can be moved but with some resistance \(it should not require a lot of force to do this however\):
 
 ```bash
-testz z=0.2mm
+testz z=0.2
 ```
 
 Once you have done this, the z height is calculated, so we need to run these commands to save this value to the printer configuration:
