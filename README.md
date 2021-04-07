@@ -7,7 +7,7 @@ description: >-
 # Welcome to klipper.info!
 
 {% hint style="info" %}
-Discord Server link: [https://discord.gg/df9yTE2](https://discord.gg/df9yTE2)
+Discord Server link: [https://discord.klipper3d.org/](https://discord.klipper3d.org/)
 {% endhint %}
 
 {% hint style="warning" %}
